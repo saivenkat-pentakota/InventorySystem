@@ -1,0 +1,12 @@
+<div class="itemCard display-flex">
+
+  <!-- item details -->
+  <div class=" m-2 flex-3 w-50">
+    <div class="fs-15 fw-600 ellipsis">{{item['itemName']}}</div>
+    <div class="fs-12">{{item['itemPrice']}}</div>
+    <div class="fs-12 col-lightgray ellipsis">{{item['itemDescription']}}</div>
+  </div>
+  <div>
+    <img class="itemImg flex-1" [src]="item['itemImg']">
+  </div>
+</div>

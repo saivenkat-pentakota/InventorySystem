@@ -1,1 +1,132 @@
-/* You can add global styles to this file, and also import other style files */
+body{
+  margin: 0;
+  font-family:sans-serif;
+}
+
+.navbar{
+  padding-bottom: .2rem !important;
+}
+
+/* width */
+.w-10{
+  width:10px;
+}
+.w-20{
+width:20px;
+}
+
+.w-50{
+  width:50%
+}
+.w-100{
+  width:100%
+}
+/* flex */
+.display-flex{
+  display: flex;
+}
+
+.flex-1{
+  flex:1;
+}
+
+.flex-2{
+  flex:2;
+}
+
+.flex-3{
+  flex:3;
+}
+
+.flex-4{
+  flex:4;
+}
+
+.flex-5{
+  flex:5;
+}
+/* padding */
+.pad-5{
+padding:5px;
+}
+
+.pad-10{
+  padding:10px;
+}
+
+.pad-15{
+  padding:15px;
+  }
+
+/* fontsize */
+.fs-5{
+  font-size: 5px;
+}
+.fs-10{
+  font-size: 10px;
+}
+.fs-12{
+  font-size: 12px;
+}
+
+.fs-15{
+  font-size:15px;
+}
+.fs-20{
+  font-size: 20px;
+}
+
+.fw-600{
+font-weight: 600;
+}
+
+/* color */
+.col-grey{
+color: grey;
+}
+
+.col-blue{
+  color:blue;
+}
+
+.col-lightgray{
+  color:lightgray;
+}
+
+/* ellipsis */
+.ellipsis{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+/* notification//item cart */
+.alerts{
+  height:25px;
+  margin-left: 3px;
+}
+
+/* margin */
+.mtop-5{
+  margin-top:5px;
+}
+
+.mleft-5{
+  margin-left:5px;
+}
+
+.mleft-10{
+  margin-left:10px;
+}
+
+.mleft-20{
+  margin-left:20px;
+}
+
+.mbottom-5{
+  margin-bottom: 5px;
+}
+/* shopclosed css */
+.shopClosed{
+  opacity: 0.5;
+  filter: grayscale(1);
+}

@@ -1,0 +1,12 @@
+.topNavBar{
+  height:15%;
+}
+
+.homeBody{
+  height: 85%;
+  position: absolute;
+  top: 9%;
+  width: 95%;
+  margin: 10px;
+}
+

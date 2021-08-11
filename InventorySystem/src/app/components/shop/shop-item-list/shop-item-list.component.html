@@ -1,0 +1,130 @@
+<!-- top nav bar -->
+<nav class="navbar fixed-top navbar-light bg-light topnav" >
+  <div class="container-fluid">
+    <div class="navbar-brand mb-0 h1 shopName d-flex" style="width: 75%;">
+     <div><img class="w-20" (click)="service.openShopHome()" src="../../../assets/images/left-arrow.svg"></div>
+     <div class="flex-2 mleft-20"style="width: 85%;">
+      <div class="fs-15 col-grey fw-600 ellipsis"><span>Sri Guruchandra Kirana Storeeeeeeeeeee</span></div>
+      <div class="fs-15 col-lightgray fw-600"><span>Anakapalle</span></div>
+  </div>
+    </div>
+    <div class="d-flex">
+    <img class="alerts me-2" src="../../../assets/images/notification.svg">
+  </div>
+  </div>
+</nav>
+<!-- discount box -->
+<div class="discount p-2">
+ <div class="d-flex fs-10 col-grey m-1">
+   <div class="flex-1">
+    <img  class="w-20" src="../../../../assets/images/discount.png">
+  </div>
+  <div class="flex-5">
+    30% OFF UPTO 100RS
+  </div>
+  </div>
+
+ <div class="fs-10 col-lightgray m-1">NO CODE REQUIED |UPTO 100RS</div>
+</div>
+<!-- search for items -->
+<div class="itemSearch">
+  <form class="d-flex m-2">
+    <input style="margin-right: 10px" class="form-control" type="search" placeholder="Search for Items" aria-label="Search">
+    <button class="btn btn-outline-success" type="submit">Search</button>
+  </form>
+</div>
+<!-- item list -->
+<div class="accordion accordianBody" id="accordionExample">
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingOne">
+      <button class="accordion-button " type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+        Recommended(21)
+      </button>
+    </h2>
+    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        <div class="shopitems">
+          <ng-container *ngFor="let item of service.itemDetails">
+            <ng-container *ngIf="checkCategory('CAT-01',item.itemCategory)">
+              <app-shop-item-card [item]=item></app-shop-item-card>
+            </ng-container>
+          </ng-container>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingTwo">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+        Dairy Products
+      </button>
+    </h2>
+    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        <div class="shopitems">
+          <ng-container *ngFor="let item of service.itemDetails">
+            <ng-container *ngIf="checkCategory('CAT-02',item.itemCategory)">
+              <app-shop-item-card [item]=item></app-shop-item-card>
+            </ng-container>
+          </ng-container>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingThree">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+        Groceries
+      </button>
+    </h2>
+    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        <div class="shopitems">
+          <ng-container *ngFor="let item of service.itemDetails">
+            <ng-container *ngIf="checkCategory('CAT-03',item.itemCategory)">
+              <app-shop-item-card [item]=item></app-shop-item-card>
+            </ng-container>
+          </ng-container>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingFour">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+        Stationary
+      </button>
+    </h2>
+    <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        <div class="shopitems">
+          <ng-container *ngFor="let item of service.itemDetails">
+            <ng-container *ngIf="checkCategory('CAT-04',item.itemCategory)">
+              <app-shop-item-card [item]=item></app-shop-item-card>
+            </ng-container>
+          </ng-container>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingFive">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+        cool products
+      </button>
+    </h2>
+    <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        <div class="shopitems">
+          <ng-container *ngFor="let item of service.itemDetails">
+            <ng-container *ngIf="checkCategory('CAT-05',item.itemCategory)">
+              <app-shop-item-card [item]=item></app-shop-item-card>
+            </ng-container>
+          </ng-container>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+

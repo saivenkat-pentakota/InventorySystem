@@ -1,0 +1,9 @@
+<form class="d-flex m-2">
+  <input style="margin-right: 10px" class="form-control" type="search" placeholder="Search for Items" aria-label="Search">
+  <button class="btn btn-outline-success" type="submit">Search</button>
+</form>
+<div class="shopitems">
+  <ng-container *ngFor="let item of service.itemDetails">
+  <app-shop-item-card [item]=item ></app-shop-item-card>
+  </ng-container>
+  </div>

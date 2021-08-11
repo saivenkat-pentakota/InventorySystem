@@ -1,0 +1,16 @@
+<div class="container fixed-bottom bg-light border-top" style="height: 7%;padding: 3%;">
+  <div class="row d-flex">
+    <div class="col d-flex justify-content-center">
+      <img class="alerts" (click)="service.activeComponent =1" [src]="'../../../assets/images/store'+((service.activeComponent != 1)?'.svg':'-active.svg')">
+    </div>
+    <div class="col  d-flex justify-content-center">
+      <img class="alerts" (click)="service.activeComponent =2"  [src]="'../../../assets/images/item-list'+((service.activeComponent != 2)?'.svg':'-active.svg')">
+    </div>
+    <div class="col  d-flex justify-content-center">
+      <img class="alerts" (click)="service.activeComponent =3"  [src]="'../../../assets/images/shopping-cart'+((service.activeComponent != 3)?'.svg':'-active.svg')">
+    </div>
+    <div class="col  d-flex justify-content-center">
+      <img class="alerts" (click)="service.activeComponent =4"  [src]="'../../../assets/images/user'+((service.activeComponent != 4)?'.svg':'-active.svg')">
+    </div>
+  </div>
+</div>

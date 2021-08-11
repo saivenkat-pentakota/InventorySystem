@@ -1,0 +1,28 @@
+.discount{
+  width:55%;
+  position:absolute;
+  top:10%;
+  margin:5px 15px;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+}
+
+.accordianBody{
+  position: absolute;
+  top: 30%;
+  width: 100%;
+  background: whitesmoke;
+  height: 70%;
+  overflow: hidden;
+  overflow-y: auto;
+}
+
+.accordion-item {
+  margin-bottom: 10px !important;
+}
+
+.itemSearch{
+  width: 100%;
+  position: absolute;
+  top: 22%;
+}
