@@ -1,12 +1,20 @@
 .topNavBar{
-  height:15%;
+  height:7%;
 }
 
-.homeBody{
-  height: 85%;
+.shopDetails-homeBody{
+  height: 87%;
   position: absolute;
-  top: 9%;
+  top: 8%;
   width: 95%;
-  margin: 10px;
+  margin: 0px 10px;
+}
+
+.shopItems-homeBody{
+  height: 86%;
+  position: absolute;
+  top: 8%;
+  width: 95%;
+  margin: 0px 10px;
 }
 

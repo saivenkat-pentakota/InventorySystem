@@ -1,0 +1,5 @@
+.shopitems{
+  height: 87%;
+  overflow: hidden;
+  overflow-y: auto;
+}

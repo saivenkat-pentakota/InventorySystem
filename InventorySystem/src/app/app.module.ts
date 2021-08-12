@@ -12,7 +12,11 @@ import { ShopitemsComponent } from './components/shop/shopitems/shopitems.compon
 import { ShopItemCardComponent } from './components/shop/shop-item-card/shop-item-card.component';
 import { ShopCartComponent } from './components/shop/shop-cart/shop-cart.component';
 import { ShopItemListComponent } from './components/shop/shop-item-list/shop-item-list.component';
-
+import { AngularFireModule } from '@angular/fire';
+import { environment } from '../environments/environment';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { AngularFireStorageModule } from '@angular/fire/storage';
+import { AngularFireAuthModule } from '@angular/fire/auth';
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,7 +32,11 @@ import { ShopItemListComponent } from './components/shop/shop-item-list/shop-ite
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    AngularFireModule.initializeApp(environment.firebase, 'mytestapp'),
+    AngularFirestoreModule, // Only required for database features
+    AngularFireAuthModule, // Only required for auth features,
+    AngularFireStorageModule // Only required for storage features
   ],
   providers: [],
   bootstrap: [AppComponent]
