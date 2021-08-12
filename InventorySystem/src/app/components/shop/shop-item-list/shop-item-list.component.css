@@ -1,15 +1,23 @@
+.topnav{
+  height:55px;
+}
+
 .discount{
-  width:55%;
-  position:absolute;
-  top:10%;
-  margin:5px 15px;
-  border: 1px solid lightgray;
+  margin: 5px 15px;
+  border: 1px solid black;
   border-radius: 5px;
+  width: 55%;
+}
+
+.discount-search{
+  position: absolute;
+  width: 100%;
+  top: 55px;
 }
 
 .accordianBody{
   position: absolute;
-  top: 30%;
+  top: 180px;
   width: 100%;
   background: whitesmoke;
   height: 70%;
@@ -22,7 +30,5 @@
 }
 
 .itemSearch{
-  width: 100%;
-  position: absolute;
-  top: 22%;
+
 }

@@ -93,6 +93,10 @@ color: grey;
   color:lightgray;
 }
 
+.col-orange{
+ color: #FF8730;
+}
+
 /* ellipsis */
 .ellipsis{
   white-space: nowrap;
