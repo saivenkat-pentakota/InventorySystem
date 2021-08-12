@@ -50,6 +50,14 @@ export class CommonService {
     "shopTiming":"8:00 am -- 9:30 pm",
     "discount":"Upto 10% discount on dairy products",
     "open":true
+  },{
+    "shopImg":"https://images.unsplash.com/photo-1580913428735-bd3c269d6a82?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fHNob3B8ZW58MHx8MHx8&ixlib=rb-1.2.1&w=1000&q=80",
+    "shopName":"Sri krishna Kirana Store",
+    "shopDescription":"whole sale retail shop",
+    "rating":"4.5",
+    "shopTiming":"8:30 am -- 9:00 pm",
+    "discount":"Upto 10% discount on Groceries",
+    "open":true
   }
   ]
 // item details.................................
