@@ -11,6 +11,7 @@ export class ShopDetailsComponent implements OnInit {
   constructor(public service:CommonService) { }
 
   ngOnInit(): void {
+    this.service.getShops();
   }
 
 }

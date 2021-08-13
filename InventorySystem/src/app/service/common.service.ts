@@ -1,3 +1,5 @@
+import { HttpCommonService } from './http-common.service';
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 
@@ -6,60 +8,7 @@ import { Router } from '@angular/router';
 })
 export class CommonService {
   activeComponent = 1;
-  shopDetails = [{
-    "shopImg":"https://images.unsplash.com/photo-1580913428735-bd3c269d6a82?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fHNob3B8ZW58MHx8MHx8&ixlib=rb-1.2.1&w=1000&q=80",
-    "shopName":"Sri Guruchandra Kirana Store",
-    "shopDescription":"whole sale retail shop",
-    "rating":"4.5",
-    "shopTiming":"8:30 am -- 9:00 pm",
-    "discount":"Upto 10% discount on Groceries",
-    "open":true
-  },
-  {
-    "shopImg":"https://previews.123rf.com/images/xujianghong/xujianghong1604/xujianghong160400221/55334676-tuck-shops.jpg",
-    "shopName":"Sri Sai Kirana Store",
-    "shopDescription":"whole sale shop",
-    "rating":"4.5",
-    "shopTiming":"8:00 am -- 9:00 pm",
-    "discount":"Upto 10% discount on Groceries",
-    "open":true
-  },
-  {
-    "shopImg":"https://content.jdmagicbox.com/comp/pune/f6/020pxx20.xx20.180218094008.f8f6/catalogue/much-n-more-wakad-pune-gift-shops-rqfiufq1x8.jpg?clr=333333",
-    "shopName":"Sri shakthi Kirana Store",
-    "shopDescription":"retail shop in anakapalle main road",
-    "rating":"4.5",
-    "shopTiming":"8:30 am -- 9:30 pm",
-    "discount":"Upto 10% discount on Groceries",
-    "open":true
-  },
-  {
-    "shopImg":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyG_Oa3P2VPX_i-uNHzwfKmkDjGvhkZsNHQQ&usqp=CAU",
-    "shopName":"More Super Market",
-    "shopDescription":"retail shop in anakapalle.",
-    "rating":"4.5",
-    "shopTiming":"8:00 am -- 9:30 pm",
-    "discount":"Upto 10% discount on Groceries",
-    "open":true
-  },
-  {
-    "shopImg":"https://img.etimg.com/thumb/width-640,height-480,imgsize-339811,resizemode-1,msid-76097015/industry/cons-products/fmcg/over-7-lakh-small-stores-may-have-shut-shop-due-to-lockdown/kirana.jpg",
-    "shopName":"dairy products",
-    "shopDescription":" All milk products available",
-    "rating":"4.5",
-    "shopTiming":"8:00 am -- 9:30 pm",
-    "discount":"Upto 10% discount on dairy products",
-    "open":true
-  },{
-    "shopImg":"https://images.unsplash.com/photo-1580913428735-bd3c269d6a82?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fHNob3B8ZW58MHx8MHx8&ixlib=rb-1.2.1&w=1000&q=80",
-    "shopName":"Sri krishna Kirana Store",
-    "shopDescription":"whole sale retail shop",
-    "rating":"4.5",
-    "shopTiming":"8:30 am -- 9:00 pm",
-    "discount":"Upto 10% discount on Groceries",
-    "open":true
-  }
-  ]
+  shopDetails:any = [];
 // item details.................................
   itemDetails = [{
     "itemImg":"https://img1.exportersindia.com/product_images/bc-full/2019/5/5118241/5-star-chocolate-1558517535-4919038.jpeg",
@@ -76,7 +25,7 @@ export class CommonService {
     "itemDescription":"caramel and nougat mix covered with smooth milk chocolate",
   },
   {
-    "itemImg":"http://estoreonline.com/images/thumbs/0002032_milk-packet_1000.jpeg",
+    "itemImg":"https://image.shutterstock.com/image-vector/vector-milk-carton-icon-dairy-260nw-1094909261.jpg",
     "itemName":"500ml milk packet",
     "itemPrice":"price:25rs",
     "itemCategory":["CAT-05"],
@@ -151,7 +100,7 @@ export class CommonService {
   ]
 
 // .................................................................................
-  constructor(private router:Router) { }
+  constructor(private router:Router, private httpCommon:HttpCommonService) { }
 
   openShopHome(){
     this.router.navigate(['shopHome']);
@@ -159,4 +108,11 @@ export class CommonService {
   openShopItems(){
     this.router.navigate(['shopItemList']);
   }
+
+  async getShops(){
+   this.httpCommon.getShops().subscribe(data=>{
+     this.shopDetails = data;
+   });
+  }
+
 }

@@ -17,10 +17,10 @@
 
 .accordianBody{
   position: absolute;
-  top: 180px;
+  top: 185px;
   width: 100%;
   background: whitesmoke;
-  height: 70%;
+  height: 80%;
   overflow: hidden;
   overflow-y: auto;
 }
